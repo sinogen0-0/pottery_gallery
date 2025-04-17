@@ -1,0 +1,201 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333;
+    font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.main-title {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-size: 5rem;
+    color: #252525;
+    margin: 0;
+    letter-spacing: 0.1em;
+    font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+}
+
+.pottery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.pottery-item {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.pottery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+    filter: none;
+}
+
+.pottery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.pottery-item:hover img {
+    filter: none;
+}
+
+.App {
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 160px;
+    position: relative;
+}
+
+.artist-button-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.artist-info-button {
+    background: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 0.8rem 2rem;
+    font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.artist-info-button:hover {
+    background: #333;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 #000;
+}
+
+.artist-info-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.artist-info-content {
+    background: #fff;
+    border: none;
+    padding: 3rem;
+    max-width: 600px;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.artist-info-content h2 {
+    color: #333;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.artist-info-content h3 {
+    color: #333;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.artist-info-content p {
+    margin: 0.5rem 0;
+    line-height: 1.8;
+    color: #666;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button:hover {
+    color: #666;
+}
+
+.contact-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: #f5f5f5;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.contact-footer p {
+    margin: 0.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+        padding: 2rem 1rem;
+    }
+
+    .artist-info-content {
+        margin: 1rem;
+        padding: 2rem;
+    }
+
+    .pottery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+        padding: 1.5rem 1rem;
+    }
+}
