@@ -1,0 +1,21 @@
+Jenn would like a page For
+    -Scultpure
+        -description on each piece could be fun
+    -Pots
+    -Artist statement
+        -bio
+        -contact
+        -resume
+
+
+
+Entry page should have large name title and button display that says artist statement
+and one big card stack that says "Works"
+
+Clicking "works" should spread out the card stack into 3 button tiles titled 
+"Sculptures"
+"Pottery"
+"2D"
+
+clicking each card tile should open up a different gallery grid of images
+clicking on each image opens up a modal display of the image along with description text
