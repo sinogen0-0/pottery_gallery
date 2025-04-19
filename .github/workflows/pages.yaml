@@ -23,10 +23,18 @@ jobs:
         run: npm install
 
       - name: Check out gh-pages branch
-        run: git checkout -b gh-pages
+        run: |
+          git checkout -b gh-pages
+          git rm -rf . # Remove all existing files in the branch
+          git clean -fd # Ensure no untracked files remain
 
       - name: Build site
-        run: npm run build
+        run: npm run build-linux
+
+      - name: Move build files to root
+        run: |
+          mv build/* ./
+          rm -rf build
 
       - name: Push to gh-pages branch
         env:
