@@ -1,0 +1,35 @@
+name: Build Pages Site
+
+on:
+  push:
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check out gh-pages branch
+        run: git checkout -b gh-pages
+
+      - name: Build site
+        run: npm run build
+
+      - name: Push to gh-pages branch
+        run: |
+          git add .
+          git commit -m "Push to pages branch"
+          git push --force --set-upstream origin gh-pages
