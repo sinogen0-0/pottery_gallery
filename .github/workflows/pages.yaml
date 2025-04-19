@@ -19,25 +19,14 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Change to repository directory
-        run: cd ${{ github.workspace }}
-
       - name: Install dependencies
         run: npm install
 
       - name: Check out gh-pages branch
-        run: |
-          git checkout -b gh-pages
-          git rm -rf . # Remove all existing files in the branch
-          git clean -fd # Ensure no untracked files remain
+        run: git checkout -b gh-pages
 
       - name: Build site
         run: npm run build-linux
-
-      - name: Move build files to root
-        run: |
-          mv build/* ./
-          rm -rf build
 
       - name: Push to gh-pages branch
         env:
