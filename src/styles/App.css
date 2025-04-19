@@ -199,3 +199,106 @@ body {
         padding: 1.5rem 1rem;
     }
 }
+
+.card-stack {
+  position: relative;
+  width: 38.2vw;  /* Golden ratio of viewport width (61.8% remains) */
+  height: 38.2vw; /* Keep it square */
+  max-width: 500px;
+  max-height: 500px;
+  min-width: 200px;
+  min-height: 200px;
+  margin: 40px auto;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 245, 0.979);
+  border: 3px solid #333;
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: 0 4px 8px #333;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card-1 {
+  transform: translate(-8px, -8px) scale(0.98);
+  z-index: 3;
+}
+
+.card-2 {
+  transform: translate(0px, 0px) scale(0.98);
+  z-index: 2;
+}
+
+.card-3 {
+  transform: translate(8px, 8px) scale(0.98);
+  z-index: 1;
+}
+
+.card-stack.expanded {
+  width: 38.2vw; /* Golden ratio: 61.8% of viewport width */
+  height: 38.2vw;
+  max-width: 500px;
+  max-height: 500px;
+  min-width: 200px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-stack.expanded .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  transform: scale(1) translateY(0);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card-stack.expanded .card-1 {
+  transform: translateX(-110%) scale(1);
+  z-index: 3;
+}
+
+.card-stack.expanded .card-2 {
+  transform: translateX(0%) scale(1);
+  z-index: 2;
+}
+
+.card-stack.expanded .card-3 {
+  transform: translateX(110%) scale(1);
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .card-stack, .card-stack.expanded {
+    width: 90vw;
+    height: 90vw;
+    max-width: 98vw;
+    max-height: 98vw;
+    min-width: 150px;
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-stack, .card-stack.expanded {
+    width: 98vw;
+    height: 98vw;
+    min-width: 100px;
+    min-height: 100px;
+  }
+}

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PotteryGrid from './components/PotteryGrid';
 import './styles/App.css';
 
 function App() {
@@ -7,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="main-title">JENN ANGELL</h1>
+      <h1 className="main-title">JENNXANGELL</h1>
       <div className="artist-button-container">
         <button className="artist-info-button" onClick={() => setShowArtistInfo(!showArtistInfo)}>
           Artist Info
@@ -18,25 +17,39 @@ function App() {
         <div className="artist-info-overlay" onClick={() => setShowArtistInfo(false)}>
           <div className="artist-info-content" onClick={e => e.stopPropagation()}>
             <h2>About the Artist</h2>
-            <p>Jenn Angell is a contemporary ceramic artist based in the Pacific Northwest, 
-               specializing in functional pottery with a modern twist.</p>
+            <p>Jenn Angell is an amazing artist.</p>
             <div className="contact-info">
               <h3>Contact</h3>
-              <p>Email: jenn.angell@example.com</p>
-              <p>Instagram: @jennangell.ceramics</p>
-              <p>Studio visits by appointment only</p>
+              <p>Email: she has an email somewhere</p>
+              <p>Instagram: @jennxangell</p>
             </div>
             <button className="close-button" onClick={() => setShowArtistInfo(false)}>×</button>
           </div>
         </div>
       )}
       
-      <PotteryGrid />
-      
+      <CardStack />
+
       <footer className="contact-footer">
-        <p>For inquiries: jenn.angell@example.com</p>
-        <p>Follow on Instagram: @jennangell.ceramics</p>
+        <p>For inquiries: </p>
+        <p>Follow on Instagram: @jennxangell</p>
       </footer>
+    </div>
+  );
+}
+
+function CardStack() {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleClick = () => {
+    setExpanded(!expanded);
+  };
+
+  return (
+    <div className={`card-stack ${expanded ? 'expanded' : ''}`} onClick={handleClick}>
+      <div className="card card-1">Card 1</div>
+      <div className="card card-2">Card 2</div>
+      <div className="card card-3">Card 3</div>
     </div>
   );
 }
