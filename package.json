@@ -7,7 +7,7 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-linux": "react-scripts build && mb build/* ./ && rm -rf build"
+    "build-linux": "react-scripts build && mv build/* ./ && rm -rf build"
   },
   "keywords": [
     "pottery",
