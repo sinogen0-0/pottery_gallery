@@ -52,7 +52,7 @@ const BaseGrid = ({ data, onBack }) => {
                 ))}
                 {selectedImage && (
                     <div className={`overlay ${isClosing ? 'fade-out' : ''}`} onClick={handleClose}>
-                        <div className="enlarged-container" onClick={() => handleClose()}>
+                        <div className="enlarged-container" onClick={handleClose}>
                             <div className="enlarged-image-container">
                                 <img src={selectedImage.imageUrl} alt={selectedImage.title} />
                             </div>
