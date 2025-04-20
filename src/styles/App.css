@@ -112,7 +112,10 @@ body {
     background: #fff;
     border: none;
     padding: 3rem;
-    max-width: 600px;
+    max-width: 61.2%;
+    min-width: 61.2%;
+    max-height: 61.2%;
+    min-height: 61.2%;
     position: relative;
     border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -153,13 +156,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .close-button:hover {
   background: #333;
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 4px 4px 0 #000;
+  transform: translateY(-1px);
+  box-shadow: 4px 4px 0 #333333a1;
 }
 
 .card-stack {
@@ -270,11 +274,6 @@ body {
   .main-title {
   font-size: 2.5rem;
   padding: 2rem 1rem;
-  }
-
-  .artist-info-content {
-      margin: 1rem;
-      padding: 2rem;
   }
 
   .pottery-grid {
