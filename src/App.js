@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import './styles/App.css';
+import PotteryGrid from './components/PotteryGrid';
+import SculptureGrid from './components/SculptureGrid';
+import TwoDGrid from './components/TwoDGrid';
 
 function App() {
   const [showArtistInfo, setShowArtistInfo] = useState(false);
+  const [currentView, setCurrentView] = useState('card-stack');
 
   return (
     <div className="App">
@@ -28,7 +32,10 @@ function App() {
         </div>
       )}
       
-      <CardStack />
+      {currentView === 'card-stack' && <CardStack onViewChange={setCurrentView} />}
+      {currentView === 'pottery' && <PotteryGrid onBack={() => setCurrentView('card-stack')} />}
+      {currentView === 'sculpture' && <SculptureGrid onBack={() => setCurrentView('card-stack')} />}
+      {currentView === '2d' && <TwoDGrid onBack={() => setCurrentView('card-stack')} />}
 
       <footer>
       </footer>
@@ -36,7 +43,7 @@ function App() {
   );
 }
 
-function CardStack() {
+function CardStack({ onViewChange }) {
   const [expanded, setExpanded] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -58,13 +65,13 @@ function CardStack() {
 
     switch(e.target.className) {
       case 'card card-1':
-        console.log('Sculptures clicked');
+        onViewChange('sculpture');
         break;
       case 'card card-2':
-        console.log('Pottery clicked');
+        onViewChange('pottery');
         break;
       case 'card card-3':
-        console.log('2D clicked');
+        onViewChange('2d');
         break;
       default:
         break;

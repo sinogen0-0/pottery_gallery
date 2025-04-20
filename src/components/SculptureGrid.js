@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import LazyLoad from 'react-lazyload';
-import potteryData from '../data/pottery';
-import './PotteryGrid.css';
+import sculptureData from '../data/sculpture';
+import './PotteryGrid.css'; // Reuse the same CSS for consistent styling
 
-const PotteryGrid = ({ onBack }) => {
+const SculptureGrid = ({ onBack }) => {
     const [selectedImage, setSelectedImage] = useState(null);
 
     useEffect(() => {
@@ -31,7 +31,7 @@ const PotteryGrid = ({ onBack }) => {
                 Back to Works
             </button>
             <div className="pottery-grid">
-                {potteryData.map(item => (
+                {sculptureData.map(item => (
                     <div 
                         key={item.id} 
                         className={`pottery-item ${selectedImage?.id === item.id ? 'enlarged' : ''}`}
@@ -63,4 +63,4 @@ const PotteryGrid = ({ onBack }) => {
     );
 };
 
-export default PotteryGrid;
+export default SculptureGrid;

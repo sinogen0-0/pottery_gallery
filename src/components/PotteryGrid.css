@@ -10,8 +10,8 @@
 
 .pottery-item {
     position: relative;
-    background: #1a1a1a;
-    border: 2px solid #ff3333;
+    background-color: #ffffff;
+    border: 2px solid #525252ef;
     transition: all 0.3s ease;
     cursor: pointer;
     overflow: hidden;
@@ -28,7 +28,7 @@
 
 .pottery-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 51, 51, 0.2);
+    box-shadow: 4px 4px 0 #333333a1;
 }
 
 .overlay {
@@ -49,8 +49,36 @@
     position: relative;
     max-width: 90vw;
     max-height: 90vh;
-    background: #1a1a1a;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    background: none;
+    padding: 0;
+}
+
+.enlarged-image-container {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.enlarged-description-container {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    max-height: calc(90vh);
+    overflow-y: auto;
+    color: #333;
+}
+
+.enlarged-description-container h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.enlarged-description-container p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .enlarged-container img {
@@ -63,6 +91,18 @@
     .pottery-grid {
         gap: 1.5rem;
         padding: 1.5rem 3%;
+    }
+
+    .enlarged-container {
+        flex-direction: column;
+    }
+
+    .enlarged-description-container {
+        max-height: 30vh;
+    }
+    
+    .enlarged-image-container {
+        justify-content: center;
     }
 }
 
