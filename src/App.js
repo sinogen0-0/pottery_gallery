@@ -51,7 +51,7 @@ function App() {
           className={`artist-info-overlay ${isArtistInfoClosing ? 'fade-out' : ''}`} 
           onClick={handleArtistInfoClose}
         >
-          <div className="artist-info-content" onClick={e => e.stopPropagation()}>
+          <div className="artist-info-content" onClick={e}>
             <h2>About the Artist</h2>
             <p>-----------------------</p>
             <div className="contact-info">
