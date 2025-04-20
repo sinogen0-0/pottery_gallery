@@ -40,16 +40,22 @@ function App() {
 
 function CardStack() {
   const [expanded, setExpanded] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleClick = () => {
+    setIsTransitioning(true);
     setExpanded(!expanded);
+
+    setTimeout(() => {
+      setIsTransitioning(false);      
+    }, 300);
   };
 
   return (
-    <div className={`card-stack ${expanded ? 'expanded' : ''}`} onClick={handleClick}>
-      <div className="card card-1">Card 1</div>
-      <div className="card card-2">Card 2</div>
-      <div className="card card-3">Card 3</div>
+    <div className={`card-stack ${expanded ? 'expanded' : ''} ${isTransitioning ? 'transitioning' : ''}`} onClick={handleClick}>
+      <div className="card card-1">{expanded ? 'Sculptures' : 'Works'}</div>
+      <div className="card card-2">{expanded ? 'Pottery' : ''}</div>
+      <div className="card card-3">{expanded ? '2D' : ''}</div>
     </div>
   );
 }
