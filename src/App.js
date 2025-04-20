@@ -7,18 +7,50 @@ import TwoDGrid from './components/TwoDGrid';
 function App() {
   const [showArtistInfo, setShowArtistInfo] = useState(false);
   const [currentView, setCurrentView] = useState('card-stack');
+  const [isArtistInfoClosing, setIsArtistInfoClosing] = useState(false);
+  const [isViewTransitioning, setIsViewTransitioning] = useState(false);
+
+  const handleArtistInfoClose = () => {
+    setIsArtistInfoClosing(true);
+    setTimeout(() => {
+      setShowArtistInfo(false);
+      setIsArtistInfoClosing(false);
+    }, 300);
+  };
+
+  const handleViewChange = (newView) => {
+    setIsViewTransitioning(true);
+    setTimeout(() => {
+      setCurrentView(newView);
+      setIsViewTransitioning(false);
+    }, 300);
+  };
+
+  const handleBackToCards = () => {
+    setIsViewTransitioning(true);
+    setTimeout(() => {
+      setCurrentView('card-stack');
+      setIsViewTransitioning(false);
+    }, 300);
+  };
 
   return (
     <div className="App">
       <h1 className="main-title">JENNXANGELL</h1>
       <div className="artist-button-container">
-        <button className="artist-info-button" onClick={() => setShowArtistInfo(!showArtistInfo)}>
+        <button 
+          className="artist-info-button" 
+          onClick={() => !isArtistInfoClosing && setShowArtistInfo(true)}
+        >
           Artist Info
         </button>
       </div>
       
-      {showArtistInfo && (
-        <div className="artist-info-overlay" onClick={() => setShowArtistInfo(false)}>
+      {(showArtistInfo || isArtistInfoClosing) && (
+        <div 
+          className={`artist-info-overlay ${isArtistInfoClosing ? 'fade-out' : ''}`} 
+          onClick={handleArtistInfoClose}
+        >
           <div className="artist-info-content" onClick={e => e.stopPropagation()}>
             <h2>About the Artist</h2>
             <p>-----------------------</p>
@@ -27,15 +59,17 @@ function App() {
               <p>Email: </p>
               <p>Instagram: @jennxangell</p>
             </div>
-            <button className="close-button" onClick={() => setShowArtistInfo(false)}>×</button>
+            <button className="close-button" onClick={handleArtistInfoClose}>×</button>
           </div>
         </div>
       )}
       
-      {currentView === 'card-stack' && <CardStack onViewChange={setCurrentView} />}
-      {currentView === 'pottery' && <PotteryGrid onBack={() => setCurrentView('card-stack')} />}
-      {currentView === 'sculpture' && <SculptureGrid onBack={() => setCurrentView('card-stack')} />}
-      {currentView === '2d' && <TwoDGrid onBack={() => setCurrentView('card-stack')} />}
+      <div className={`view-container ${isViewTransitioning ? 'fade-out' : ''}`}>
+        {currentView === 'card-stack' && <CardStack onViewChange={handleViewChange} />}
+        {currentView === 'pottery' && <PotteryGrid onBack={handleBackToCards} />}
+        {currentView === 'sculpture' && <SculptureGrid onBack={handleBackToCards} />}
+        {currentView === '2d' && <TwoDGrid onBack={handleBackToCards} />}
+      </div>
 
       <footer>
       </footer>

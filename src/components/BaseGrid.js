@@ -4,11 +4,12 @@ import './PotteryGrid.css';
 
 const BaseGrid = ({ data, onBack }) => {
     const [selectedImage, setSelectedImage] = useState(null);
+    const [isClosing, setIsClosing] = useState(false);
 
     useEffect(() => {
         const handleEscape = (e) => {
             if (e.key === 'Escape') {
-                setSelectedImage(null);
+                handleClose();
             }
         };
 
@@ -16,9 +17,17 @@ const BaseGrid = ({ data, onBack }) => {
         return () => window.removeEventListener('keydown', handleEscape);
     }, []);
 
+    const handleClose = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+            setSelectedImage(null);
+            setIsClosing(false);
+        }, 300);
+    };
+
     const handleImageClick = (item) => {
         if (selectedImage && selectedImage.id === item.id) {
-            setSelectedImage(null);
+            handleClose();
         } else {
             setSelectedImage(item);
         }
@@ -42,7 +51,7 @@ const BaseGrid = ({ data, onBack }) => {
                     </div>
                 ))}
                 {selectedImage && (
-                    <div className="overlay" onClick={() => setSelectedImage(null)}>
+                    <div className={`overlay ${isClosing ? 'fade-out' : ''}`} onClick={handleClose}>
                         <div className="enlarged-container" onClick={e => e.stopPropagation()}>
                             <div className="enlarged-image-container">
                                 <img src={selectedImage.imageUrl} alt={selectedImage.title} />
