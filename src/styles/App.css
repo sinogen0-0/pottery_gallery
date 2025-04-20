@@ -283,7 +283,7 @@ body {
   z-index: 1;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .card-stack, .card-stack.expanded {
     width: 90vw;
     height: 90vw;
@@ -292,13 +292,19 @@ body {
     min-width: 150px;
     min-height: 150px;
   }
-}
 
-@media (max-width: 600px) {
-  .card-stack, .card-stack.expanded {
-    width: 98vw;
-    height: 98vw;
-    min-width: 100px;
-    min-height: 100px;
+  .card-stack.expanded .card-1 {
+    transform: translateY(-110%) scale(1);
+    z-index: 2;
+  }
+
+  .card-stack.expanded .card-2 {
+    transform: translateY(0%) scale(1.05);
+    z-index: 3;
+  }
+
+  .card-stack.expanded .card-3 {
+    transform: translateY(110%) scale(1);
+    z-index: 2;
   }
 }

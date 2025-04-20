@@ -19,3 +19,6 @@ Clicking "works" should spread out the card stack into 3 button tiles titled
 
 clicking each card tile should open up a different gallery grid of images
 clicking on each image opens up a modal display of the image along with description text
+
+
+Need to adjust the card stack fly out to better detect when it needs to go vertical or horizontal
