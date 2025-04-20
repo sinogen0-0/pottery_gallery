@@ -162,58 +162,13 @@ body {
   box-shadow: 4px 4px 0 #000;
 }
 
-.contact-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1.5rem;
-    background: #f5f5f5;
-    text-align: center;
-    border-top: 1px solid #eee;
-}
-
-.contact-footer p {
-    margin: 0.5rem 0;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 2.5rem;
-        padding: 2rem 1rem;
-    }
-
-    .artist-info-content {
-        margin: 1rem;
-        padding: 2rem;
-    }
-
-    .pottery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 2rem;
-        padding: 1.5rem 1rem;
-    }
-}
-
 .card-stack {
   position: relative;
-  width: 38.2vw;  /* Golden ratio of viewport width (61.8% remains) */
-  height: 38.2vw; /* Keep it square */
-  max-width: 500px;
-  max-height: 500px;
-  min-width: 200px;
-  min-height: 200px;
+  width: 38.2vh;  /* Golden ratio of viewport width (61.8% remains) */
+  height: 38.2vh; /* Keep it square */
   margin: 40px auto;
   cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -262,16 +217,12 @@ body {
 }
 
 .card-stack.expanded {
-  width: 38.2vw; /* Golden ratio: 61.8% of viewport width */
-  height: 38.2vw;
-  max-width: 500px;
-  max-height: 500px;
-  min-width: 200px;
-  min-height: 200px;
+  width: 19.1vw;
+  height: 19.1vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 1.6vw;
   transition: all 0.3s ease;
 }
 
@@ -313,46 +264,43 @@ body {
   z-index: 4;
 }
 
-.card-stack.expanded .card-1:hover {
-  transform: translateX(-110%) scale(1) translateY(-2px);;
-}
 
-.card-stack.expanded .card-2:hover {
-  transform: translateX(0%) scale(1) translateY(-2px);
-}
+@media screen and (max-aspect-ratio: 9/10) {
+ 
+  .main-title {
+  font-size: 2.5rem;
+  padding: 2rem 1rem;
+  }
 
-.card-stack.expanded .card-3:hover {
-  transform: translateX(110%) scale(1) translateY(-2px);
-}
+  .artist-info-content {
+      margin: 1rem;
+      padding: 2rem;
+  }
 
-@media (max-width: 768px) {
+  .pottery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 15px;
+  }
+
   .card-stack, .card-stack.expanded {
-    width: 90vw;
-    height: 90vw;
-    max-width: 98vw;
-    max-height: 98vw;
-    min-width: 150px;
-    min-height: 150px;
+    width: 19.1vh;
+    height: 19.1vh;
+    transition: all 0.3s ease;
   }
 
   .card-stack.expanded .card-1 {
-    transform: translateY(-110%) scale(1);
+    transform: translateY(0);
     z-index: 2;
   }
 
   .card-stack.expanded .card-2 {
-    transform: translateY(0%) scale(1.05);
+    transform: translateY(110%);
     z-index: 3;
   }
 
   .card-stack.expanded .card-3 {
-    transform: translateY(110%) scale(1);
+    transform: translateY(220%);
     z-index: 2;
-  }
-
-  .card-stack.expanded .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 4px 4px 0 #000;
-    z-index: 4;
   }
 }

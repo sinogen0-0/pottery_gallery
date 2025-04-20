@@ -17,10 +17,10 @@ function App() {
         <div className="artist-info-overlay" onClick={() => setShowArtistInfo(false)}>
           <div className="artist-info-content" onClick={e => e.stopPropagation()}>
             <h2>About the Artist</h2>
-            <p>Jenn Angell is an amazing artist.</p>
+            <p>-----------------------</p>
             <div className="contact-info">
               <h3>Contact</h3>
-              <p>Email: she has an email somewhere</p>
+              <p>Email: </p>
               <p>Instagram: @jennxangell</p>
             </div>
             <button className="close-button" onClick={() => setShowArtistInfo(false)}>×</button>
@@ -30,9 +30,7 @@ function App() {
       
       <CardStack />
 
-      <footer className="contact-footer">
-        <p>For inquiries: </p>
-        <p>Follow on Instagram: @jennxangell</p>
+      <footer>
       </footer>
     </div>
   );
@@ -43,6 +41,8 @@ function CardStack() {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleClick = () => {
+    if(expanded) return;
+    
     setIsTransitioning(true);
     setExpanded(!expanded);
 
@@ -51,11 +51,31 @@ function CardStack() {
     }, 300);
   };
 
+  const handleCardClick = (e) => {
+    if(!expanded) return;
+    if(isTransitioning) return;
+    e.stopPropagation(); // Prevent the click event from bubbling up to the parent div
+
+    switch(e.target.className) {
+      case 'card card-1':
+        console.log('Sculptures clicked');
+        break;
+      case 'card card-2':
+        console.log('Pottery clicked');
+        break;
+      case 'card card-3':
+        console.log('2D clicked');
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <div className={`card-stack ${expanded ? 'expanded' : ''} ${isTransitioning ? 'transitioning' : ''}`} onClick={handleClick}>
-      <div className="card card-1">{expanded ? 'Sculptures' : 'Works'}</div>
-      <div className="card card-2">{expanded ? 'Pottery' : ''}</div>
-      <div className="card card-3">{expanded ? '2D' : ''}</div>
+      <div className="card card-1" onClick={handleCardClick}>{expanded ? 'Sculptures' : 'Works'} </div>
+      <div className="card card-2" onClick={handleCardClick}>{expanded ? 'Pottery' : ''}</div>
+      <div className="card card-3" onClick={handleCardClick}>{expanded ? '2D' : ''}</div>
     </div>
   );
 }
