@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "./static/css/main.81b5fa98.css",
+    "main.js": "./static/js/main.c79bcd28.js",
+    "static/media/IMG_2399_small.jpg": "./static/media/IMG_2399_small.717e773a24532c0959dc.jpg",
+    "static/media/IMG_2400_small.jpg": "./static/media/IMG_2400_small.82b2b782617dff00ebcf.jpg",
+    "static/media/IMG_2418_rotated.JPG": "./static/media/IMG_2418_rotated.653ece0039b7c1b5c6f7.JPG",
+    "static/media/IMG_2424_rotated.JPG": "./static/media/IMG_2424_rotated.ed37fba249c16b2daed5.JPG",
+    "static/media/IMG_2409_rotated.JPG": "./static/media/IMG_2409_rotated.b8b848355a22304275df.JPG",
+    "static/media/IMG_2427_rotated.JPG": "./static/media/IMG_2427_rotated.07a72417bfd01d40e5d0.JPG",
+    "static/media/IMG_2404_rotated.JPG": "./static/media/IMG_2404_rotated.aa3bd2d1f18c9e6364c0.JPG",
+    "static/media/IMG_2410_rotated.JPG": "./static/media/IMG_2410_rotated.e8d11c91cb01bd456ef7.JPG",
+    "static/media/IMG_2408_rotated.JPG": "./static/media/IMG_2408_rotated.1dab3add0e04db46009e.JPG",
+    "static/media/IMG_2412_rotated.JPG": "./static/media/IMG_2412_rotated.919680f476c7ab8a2728.JPG",
+    "static/media/IMG_2423_rotated.JPG": "./static/media/IMG_2423_rotated.8f6fde13c4079628c52d.JPG",
+    "static/media/IMG_2401_rotated.JPG": "./static/media/IMG_2401_rotated.0bb3bb51f4491badd2f2.JPG",
+    "static/media/IMG_2414_rotated.JPG": "./static/media/IMG_2414_rotated.6acc7508979df8043167.JPG",
+    "static/media/IMG_2402_rotated.JPG": "./static/media/IMG_2402_rotated.79571f636c9d105f9971.JPG",
+    "static/media/IMG_2426_rotated.JPG": "./static/media/IMG_2426_rotated.a99bf5b5abffb1607ddb.JPG",
+    "static/media/IMG_2415_rotated.JPG": "./static/media/IMG_2415_rotated.57d4a27962fc5e04ee09.JPG",
+    "static/media/IMG_2407_rotated.JPG": "./static/media/IMG_2407_rotated.62499a5331e5ef7195f0.JPG",
+    "static/media/IMG_2417_rotated.JPG": "./static/media/IMG_2417_rotated.9e806ba7d8267ffc27e3.JPG",
+    "static/media/IMG_2419_rotated.JPG": "./static/media/IMG_2419_rotated.60a32d6141b165640a98.JPG",
+    "static/media/IMG_2403_rotated.JPG": "./static/media/IMG_2403_rotated.4dbc676956a283da69c2.JPG",
+    "static/media/IMG_2420_rotated.JPG": "./static/media/IMG_2420_rotated.6640f847236ebdf84630.JPG",
+    "static/media/IMG_2422_rotated.JPG": "./static/media/IMG_2422_rotated.5135408b1e1abc1f3ac8.JPG",
+    "static/media/IMG_2421_rotated.JPG": "./static/media/IMG_2421_rotated.2d6dd7c256a26690a38c.JPG",
+    "static/media/IMG_2416_rotated.JPG": "./static/media/IMG_2416_rotated.8e2290f6f6eef1fc8473.JPG",
+    "static/media/IMG_2405_rotated.JPG": "./static/media/IMG_2405_rotated.6894933123bc29f6d3ae.JPG",
+    "index.html": "./index.html",
+    "main.81b5fa98.css.map": "./static/css/main.81b5fa98.css.map",
+    "main.c79bcd28.js.map": "./static/js/main.c79bcd28.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81b5fa98.css",
+    "static/js/main.c79bcd28.js"
+  ]
+}
