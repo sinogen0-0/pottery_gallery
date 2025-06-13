@@ -1,23 +1,39 @@
-import img2401 from '../images/IMG_2401_rotated.JPG';
-import img2402 from '../images/IMG_2402_rotated.JPG';
+import angell04 from '../images/images_2d/04_Angell_Jenn.jpg';
+import lifeSizePortrait from '../images/images_2d/Angell_Jenn_LifeSizePortrait.jpg';
+import heart from '../images/images_2d/heart.jpg';
+import img1732 from '../images/images_2d/IMG_1732.JPG';
 
 const twod = [
     {
         id: 1,
-        title: "TBD: Write title",
-        imageUrl: img2401,
-        description: "TBD: Write description",
-        medium: "",
-        dimensions: "",
+        title: "TBD",
+        imageUrl: angell04,
+        description: "TBD",
+        medium: "TBD",
         year: ""
     },
     {
         id: 2,
-        title: "TBD: Write title",
-        imageUrl: img2402,
-        description: "TBD: Write description",
-        medium: "",
-        dimensions: "",
+        title: "TBD",
+        imageUrl: lifeSizePortrait,
+        description: "TBD",
+        medium: "TBD",
+        year: ""
+    },
+    {
+        id: 3,
+        title: "TBD",
+        imageUrl: heart,
+        description: "TBD",
+        medium: "TBD",
+        year: ""
+    },
+    {
+        id: 4,
+        title: "TBD",
+        imageUrl: img1732,
+        description: "TBD",
+        medium: "TBD",
         year: ""
     }
 ];

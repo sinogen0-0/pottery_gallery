@@ -114,8 +114,8 @@ function CardStack({ onViewChange }) {
 
   return (
     <div className={`card-stack ${expanded ? 'expanded' : ''} ${isTransitioning ? 'transitioning' : ''}`} onClick={handleClick}>
-      <div className="card card-1" onClick={handleCardClick}>{expanded ? 'Sculptures' : 'Works'} </div>
-      <div className="card card-2" onClick={handleCardClick}>{expanded ? 'Pottery' : ''}</div>
+      <div className="card card-1" onClick={handleCardClick}>{expanded ? 'Sculpture' : 'Works'} </div>
+      <div className="card card-2" onClick={handleCardClick}>{expanded ? 'Pots' : ''}</div>
       <div className="card card-3" onClick={handleCardClick}>{expanded ? '2D' : ''}</div>
     </div>
   );

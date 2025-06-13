@@ -46,7 +46,7 @@ const BaseGrid = ({ data, onBack }) => {
                         onClick={() => handleImageClick(item)}
                     >
                         <LazyLoad height={200} offset={100} once>
-                            <img src={item.imageUrl} alt={item.title} />
+                            <img src={item.previewUrl || item.imageUrl} alt={item.title} />
                         </LazyLoad>
                     </div>
                 ))}
