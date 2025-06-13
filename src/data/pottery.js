@@ -21,134 +21,96 @@ const pottery = [
         title: "TBD",
         imageUrl: brainMug,
         description: "TBD",
-        medium: "Stoneware, terra sigillata, glaze, underglaze",
-        technique: "TBD",
-        firing: "Soda fired to cone 10",
-        dimensions: "3\" x 3\" x 4\"",
-        year: "2018"
     },
     {
         id: 2,
         title: "TBD",
         imageUrl: brainMug2,
         description: "TBD",
-        medium: "Stoneware, terra sigillata, glaze, underglaze",
-        technique: "TBD",
-        firing: "Soda fired to cone 10",
-        dimensions: "3\" x 3\" x 4\"",
-        year: "2018"
     },
     {
         id: 3,
         title: "TBD",
         imageUrl: angellJenn01,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 4,
         title: "TBD",
         imageUrl: angellJenn02,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 5,
         title: "TBD",
         imageUrl: angellJar,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 6,
         title: "TBD",
         imageUrl: angellJenn1,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 7,
         title: "TBD",
         imageUrl: angellJenn2,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 8,
         title: "TBD",
         imageUrl: angellJenn3,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 9,
         title: "TBD",
         imageUrl: dsc0032,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 10,
         title: "TBD",
         imageUrl: dsc0103,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 11,
         title: "TBD",
         imageUrl: dsc0104,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 12,
         title: "TBD",
         imageUrl: dsc0106,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 13,
         title: "TBD",
         imageUrl: ja6,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 14,
         title: "TBD",
         imageUrl: angell02,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 15,
         title: "TBD",
         imageUrl: angell04,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     },
     {
         id: 16,
         title: "TBD",
         imageUrl: jennAngell01,
         description: "TBD",
-        medium: "Ceramic",
-        year: ""
     }
 ];
 

@@ -9,32 +9,24 @@ const twod = [
         title: "TBD",
         imageUrl: angell04,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 2,
         title: "TBD",
         imageUrl: lifeSizePortrait,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 3,
         title: "TBD",
         imageUrl: heart,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 4,
         title: "TBD",
         imageUrl: img1732,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     }
 ];
 

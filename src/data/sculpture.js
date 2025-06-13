@@ -31,22 +31,11 @@ import smallWhiteForm from '../images/images_sculpture/small_white_form.jpg';
 
 const sculpture = [
     {
-        id: 1,
-        title: "TBD",
-        imageUrl: gallery,
-        previewUrl: smallGallery,
-        description: "TBD",
-        medium: "TBD",
-        year: ""
-    },
-    {
         id: 2,
         title: "TBD",
         imageUrl: glassTableJar,
         previewUrl: smallGlassTableJar,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 3,
@@ -54,8 +43,6 @@ const sculpture = [
         imageUrl: greyRedHeart,
         previewUrl: smallGreyRedHeart,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 4,
@@ -63,8 +50,6 @@ const sculpture = [
         imageUrl: heartPillow,
         previewUrl: smallHeartPillow,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 5,
@@ -72,8 +57,6 @@ const sculpture = [
         imageUrl: kidneys,
         previewUrl: smallKidneys,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 6,
@@ -81,8 +64,6 @@ const sculpture = [
         imageUrl: leftKidney,
         previewUrl: smallLeftKidney,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 7,
@@ -90,8 +71,6 @@ const sculpture = [
         imageUrl: plateTower,
         previewUrl: smallPlateTower,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 8,
@@ -99,8 +78,6 @@ const sculpture = [
         imageUrl: ribs,
         previewUrl: smallRibs,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 9,
@@ -108,8 +85,6 @@ const sculpture = [
         imageUrl: rightKidney,
         previewUrl: smallRightKidney,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 10,
@@ -117,8 +92,6 @@ const sculpture = [
         imageUrl: sludge,
         previewUrl: smallSludge,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 11,
@@ -126,8 +99,6 @@ const sculpture = [
         imageUrl: tentacle,
         previewUrl: smallTentacle,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 12,
@@ -135,8 +106,6 @@ const sculpture = [
         imageUrl: tinyBlob,
         previewUrl: smallTinyBlob,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 13,
@@ -144,8 +113,6 @@ const sculpture = [
         imageUrl: tinyBlob2,
         previewUrl: smallTinyBlob2,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 14,
@@ -153,8 +120,6 @@ const sculpture = [
         imageUrl: torso,
         previewUrl: smallTorso,
         description: "TBD",
-        medium: "TBD",
-        year: ""
     },
     {
         id: 15,
@@ -162,8 +127,13 @@ const sculpture = [
         imageUrl: whiteForm,
         previewUrl: smallWhiteForm,
         description: "TBD",
-        medium: "TBD",
-        year: ""
+    },
+    {
+        id: 16,
+        title: "TBD",
+        imageUrl: gallery,
+        previewUrl: smallGallery,
+        description: "TBD",
     }
 ];
 
