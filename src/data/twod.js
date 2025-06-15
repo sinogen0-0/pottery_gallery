@@ -1,7 +1,7 @@
 import angell04 from '../images/images_2d/04_Angell_Jenn.jpg';
 import lifeSizePortrait from '../images/images_2d/Angell_Jenn_LifeSizePortrait.jpg';
 import heart from '../images/images_2d/heart.jpg';
-import img1732 from '../images/images_2d/IMG_1732.JPG';
+import img1732 from '../images/images_2d/IMG_1732.jpg';
 
 const twod = [
     {

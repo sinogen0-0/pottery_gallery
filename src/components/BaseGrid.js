@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LazyLoad from 'react-lazyload';
 import './PotteryGrid.css';
 
-const BaseGrid = ({ data, onBack }) => {
+const BaseGrid = ({ data, onBack, onTileClick, showTextTile }) => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [isClosing, setIsClosing] = useState(false);
 
@@ -40,15 +40,26 @@ const BaseGrid = ({ data, onBack }) => {
             </button>
             <div className="pottery-grid">
                 {data.map(item => (
-                    <div 
-                        key={item.id} 
-                        className={`pottery-item ${selectedImage?.id === item.id ? 'enlarged' : ''}`}
-                        onClick={() => handleImageClick(item)}
-                    >
-                        <LazyLoad height={200} offset={100} once>
-                            <img src={item.previewUrl || item.imageUrl} alt={item.title} />
-                        </LazyLoad>
-                    </div>
+                    item.isTextTile && showTextTile ? (
+                        <div
+                            key={item.id}
+                            className="pottery-item text-tile"
+                            onClick={() => onTileClick && onTileClick(item)}
+                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '1.2rem', cursor: 'pointer', background: '#f5f5f5' }}
+                        >
+                            {item.title}
+                        </div>
+                    ) : (
+                        <div 
+                            key={item.id} 
+                            className={`pottery-item ${selectedImage?.id === item.id ? 'enlarged' : ''}`}
+                            onClick={() => handleImageClick(item)}
+                        >
+                            <LazyLoad height={200} offset={100} once>
+                                <img src={item.previewUrl || item.imageUrl} alt={item.title} />
+                            </LazyLoad>
+                        </div>
+                    )
                 ))}
                 {selectedImage && (
                     <div className={`overlay ${isClosing ? 'fade-out' : ''}`} onClick={handleClose}>
@@ -56,13 +67,17 @@ const BaseGrid = ({ data, onBack }) => {
                             <div className="enlarged-image-container">
                                 <img src={selectedImage.imageUrl} alt={selectedImage.title} />
                             </div>
-                            <div className="enlarged-description-container">
-                                <h3>{selectedImage.title}</h3>
-                                <p>{selectedImage.description}</p>
-                                {selectedImage.medium && <p><strong>Medium:</strong> {selectedImage.medium}</p>}
-                                {selectedImage.dimensions && <p><strong>Dimensions:</strong> {selectedImage.dimensions}</p>}
-                                {selectedImage.year && <p><strong>Year:</strong> {selectedImage.year}</p>}
-                            </div>
+                            {   selectedImage.title &&
+                                selectedImage.title.trim() !== '' &&
+                                selectedImage.title.trim().toLowerCase() !== 'tbd' && (
+                                <div className="enlarged-description-container">
+                                    <h3>{selectedImage.title}</h3>
+                                    <p>{selectedImage.description}</p>
+                                    {selectedImage.medium && <p><strong>Medium:</strong> {selectedImage.medium}</p>}
+                                    {selectedImage.dimensions && <p><strong>Dimensions:</strong> {selectedImage.dimensions}</p>}
+                                    {selectedImage.year && <p><strong>Year:</strong> {selectedImage.year}</p>}
+                                </div>
+                            )}
                         </div>
                     </div>
                 )}
