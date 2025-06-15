@@ -2,7 +2,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const imagesDir = path.join(__dirname, '..', 'src', 'images');
+const imagesDir = path.join(__dirname, '..', 'src', 'images', 'images_sculpture', 'SelfPortraitWithGrief');
 
 fs.readdirSync(imagesDir)
     .filter(file => /\.(jpg|JPG)$/.test(file))
@@ -10,7 +10,7 @@ fs.readdirSync(imagesDir)
         const inputPath = path.join(imagesDir, file);
         const outputPath = path.join(
             imagesDir, 
-            file.replace(/\.(jpg|JPG)$/, '_small.$1')
+            `small_${file}`
         );
 
         sharp(inputPath)

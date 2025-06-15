@@ -41,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "sharp": "^0.34.1"
+    "sharp": "^0.34.2"
   }
 }
