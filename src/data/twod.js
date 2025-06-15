@@ -5,6 +5,13 @@ import img1732 from '../images/images_2d/IMG_1732.jpg';
 
 const twod = [
     {
+        id: 0,
+        title: "Love Ya Both",
+        description: "",
+        isTextTile: true, // Indicates this is a text-only tile
+        opensGrid: "loveYaBoth", // Key to open the new grid
+    },
+    {
         id: 1,
         title: "TBD",
         imageUrl: angell04,
